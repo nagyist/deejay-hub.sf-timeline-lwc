@@ -1,22 +1,28 @@
 # Change Log
 
-## XX Xxx 2026 v1.16.0
+## 21 May 2026 v1.16.0
 
 **WHAT'S NEW**
 -   Changed Salesforce API to v66.0 from v63.0
--   Enforced FLS with stripInaccesible aligning to best practice
--   Improved error handling for setup tasks
--   Console apps now open records in new tab
--   Performance and security improvements
--   Tooltip now stays open to interact with hyperlinks 
+-   Enforced FLS with stripInaccessible aligning to Salesforce security best practice
+-   Added translatable custom labels for all error messages with actionable guidance
+-   Added support for opening records in a new workspace tab in Console apps
+-   Added tooltip interaction allowing users to click hyperlinks before dismissal
+-   Performance improvements deferring describe calls to reduce server round-trips
+-   Performance improvements caching tooltip data to avoid redundant server calls
+-   Performance improvements rewriting string manipulation to reduce CPU time
+-   Added SOQL injection defense for dynamically-built queries
 
 **BUG FIXES**
--   Fixed cosmetic mouse interaction when dragging zoom
--   Fixed error messages not being translated correctly
--   Fixed casing issue when comparing values
--   Fixed SOQL limits issues for LookedUpFromActivity Object
--   Fixed duplicate resize handlers
--   Fixed tooltip nubbin placement for RTL languages
+-   Fixed CPU timeout errors on orgs with complex configurations or large record sets
+-   Fixed SOQL limit issues for LookedUpFromActivity and custom Activity relationships
+-   Fixed duplicate resize event handlers causing unnecessary re-renders
+-   Fixed today line not redrawing when the component is resized
+-   Fixed tooltip nubbin placement for right-to-left languages
+-   Fixed field access check not handling inaccessible fields gracefully
+-   Fixed error messages not being routed through custom labels for translation
+-   Fixed casing issue when comparing object and field API names
+-   Fixed cosmetic mouse cursor during zoom drag interaction
   
 ## 29 May 2025 v1.15.0
 
